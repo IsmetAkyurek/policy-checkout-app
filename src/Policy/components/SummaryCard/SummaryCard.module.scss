@@ -1,0 +1,72 @@
+@import "Core/styles/variables.scss";
+@import "Core/styles/mixins.scss";
+
+.container {
+  padding: 24px 32px;
+  color  : $color-white;
+
+  img {
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font-weight   : 500;
+    font-size     : 16px;
+    line-height   : 1.25;
+    margin-bottom : 24px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color         : rgba($color-white, 0.75);
+  }
+
+  .price {
+    text-align: right;
+
+    .amount {
+      line-height: 1;
+      font-weight: 500;
+      font-size  : 60px;
+
+      sup {
+        line-height: 1.2;
+        font-size  : 32px;
+      }
+    }
+
+    span {
+      font-size  : 18px;
+      line-height: 1.5;
+    }
+  }
+
+  @include mobile {
+    padding      : 24px;
+    display      : flex;
+    border-radius: 0px 0px 16px 16px;
+
+    img {
+      max-width: 32px;
+    }
+
+    h4 {
+      margin-bottom: 0;
+      font-size    : 14px;
+    }
+
+    .price {
+      margin-left: auto;
+
+      .amount {
+        font-size: 28px;
+
+        sup {
+          font-size: 18px;
+        }
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}

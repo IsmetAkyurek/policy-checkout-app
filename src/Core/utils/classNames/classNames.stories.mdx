@@ -1,0 +1,29 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Core/Utils/classNames" />
+
+## classNames ⇒ <code>string</code>
+
+Returns a joined className according to given parameters, filters empty values.
+
+### Props
+
+| Param        | Type                                                                                    | Required          | Description                   |
+| :----------- | :-------------------------------------------------------------------------------------- | :---------------- | :---------------------------- |
+| ...classList | <code>string</code><code>null</code><code>undefined</code><code>[string,boolean]</code> | <code>true</code> | className list to be combined |
+
+### Usage
+
+```tsx
+import { cx } from "Core/utils";
+import styles from "./ExampleComponent.module.scss";
+
+type ExampleComponentProps = {
+  active: boolean;
+  className?: string;
+};
+
+const ExampleComponent: React.FC<ExampleComponentProps> = ({ className, active }) => {
+  return <div className={cx(styles.container, className, [styles.active, active])}>Example Component</div>;
+};
+```

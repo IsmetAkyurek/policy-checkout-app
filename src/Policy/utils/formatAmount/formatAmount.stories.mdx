@@ -1,0 +1,21 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Policy/Utils/formatAmount" />
+
+## formatAmount ⇒ <code>string</code>
+
+Formats the given amount value in a fixed 2 digit format and returns as a string.
+
+### Props
+
+| Param  | Type                | Required          | Description                  |
+| :----- | :------------------ | :---------------- | :--------------------------- |
+| amount | <code>number</code> | <code>true</code> | Amount value to be formatted |
+
+### Usage
+
+```typescript
+import { formatAmount } from "Policy/utils";
+
+const formattedValue = formatAmount(10.99);
+```

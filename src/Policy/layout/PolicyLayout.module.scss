@@ -1,0 +1,67 @@
+@import "Core/styles/mixins.scss";
+@import "Core/styles/variables.scss";
+
+.container {
+  padding: 120px 0 60px 0;
+
+  header {
+    z-index         : 10;
+    padding         : 32px 0;
+    background-color: $color-lightBlue;
+    @include fixed(0, 0, null, 0);
+
+    .content {
+      @include content(1344px, calc(100% - 96px));
+    }
+  }
+
+  main {
+    gap: 32px;
+    @include content(1344px, calc(100% - 96px));
+    @include flex(flex-start);
+
+    .contentCard {
+      flex      : 1;
+      align-self: stretch;
+      padding   : 16px 32px;
+      @include flex(null, null, column);
+    }
+
+    aside {
+      flex-shrink: 0;
+      gap        : 32px;
+      top        : 120px;
+      width      : 524px;
+      position   : sticky;
+      position   : -webkit-sticky;
+      @include flex(null, null, column);
+    }
+  }
+
+  @include mobile {
+    padding: 87px 0 0 0;
+
+    header {
+      padding: 16px 0;
+
+      .content {
+        max-width: calc(100% - 48px);
+      }
+    }
+
+    main {
+      max-width     : 100%;
+      flex-direction: column-reverse;
+
+      .contentCard {
+        padding: 24px;
+      }
+
+      aside {
+        margin-left: 0;
+        top        : 87px;
+        width      : 100%;
+      }
+    }
+  }
+}

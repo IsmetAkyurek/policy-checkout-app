@@ -1,0 +1,20 @@
+@import "Core/styles/variables.scss";
+@import "Core/styles/mixins.scss";
+
+.container {
+
+  h1 {
+    font-weight  : 500;
+    line-height  : 1.2;
+    font-size    : 32px;
+    margin-bottom: 24px;
+  }
+
+  @include mobile {
+
+    h1 {
+      margin-bottom: 0;
+      font-size    : 28px;
+    }
+  }
+}

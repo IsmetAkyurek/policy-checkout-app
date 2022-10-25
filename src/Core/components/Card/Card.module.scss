@@ -1,0 +1,37 @@
+@import 'Core/styles/variables.scss';
+
+.container {
+  border-radius: 8px;
+
+  &.primary {
+    border-color: $color-primary;
+    background  : linear-gradient(267.3deg, #7C8EEF 0%, #6D6CD0 100.29%);
+  }
+
+  &.secondary {
+    border-color    : rgba($color-primary, 0.4);
+    background-color: rgba($color-primary, 0.1);
+  }
+
+  &.default {
+    background-color: $color-white;
+    border-color    : rgba($color-dark, 0.4);
+  }
+
+  &.shadowed {
+    box-shadow: 0px 4px 12px rgba($color-dark, 0.08);
+  }
+
+  &.hovered {
+    transition: all .2s;
+
+    &:hover {
+      box-shadow: 0px 4px 12px rgba($color-dark, 0.16);
+    }
+  }
+
+  &.bordered {
+    border-width: 1px;
+    border-style: solid;
+  }
+}

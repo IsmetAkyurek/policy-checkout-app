@@ -1,0 +1,17 @@
+@import "Core/styles/variables.scss";
+@import "Core/styles/mixins.scss";
+
+.container {
+  padding: 36px 32px;
+
+  h3 {
+    font-weight  : 500;
+    line-height  : 1.2;
+    font-size    : 24px;
+    margin-bottom: 16px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

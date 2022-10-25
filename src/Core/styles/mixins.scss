@@ -1,0 +1,51 @@
+@mixin flex($alignItems: null, $justifyContent: null, $direction: null) {
+  display        : flex;
+  flex-direction : $direction;
+  align-items    : $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top     : $top;
+  left    : $left;
+  right   : $right;
+  bottom  : $bottom;
+}
+
+@mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
+  position: fixed;
+  top     : $top;
+  left    : $left;
+  right   : $right;
+  bottom  : $bottom;
+}
+
+@mixin content($width, $maxWidth) {
+  margin   : auto;
+  width    : $width;
+  max-width: $maxWidth;
+}
+
+@mixin size($width, $height) {
+  width : $width;
+  height: $height;
+}
+
+@mixin phone {
+  @media screen and (max-width: 499px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 500px) and (max-width: 1030px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 1030px) {
+    @content;
+  }
+}

@@ -1,0 +1,17 @@
+@import "Core/styles/variables.scss";
+@import "Core/styles/mixins.scss";
+
+.container {
+  gap       : 16px;
+  display   : flex;
+  margin-top: auto;
+  padding   : 24px 0;
+
+  @include mobile {
+    gap: 8px;
+
+    .next {
+      flex: 1;
+    }
+  }
+}

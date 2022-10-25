@@ -1,0 +1,20 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Core/Utils/pushGtmEvent" />
+
+## pushGtmEvent ⇒ <code>void</code>
+
+Pushes an event to GTM Layer with given params.
+
+### Props
+
+| Param | Type                                 | Required           | Description                  |
+| :---- | :----------------------------------- | :----------------- | :--------------------------- |
+| event | <code>string</code>                  | <code>true</code>  | Event Tag Name to be pushed  |
+| data  | <code>Record<string, unknown></code> | <code>false</code> | (Optional) data to be pushed |
+
+### Usage
+
+```javascript
+pushGtmEvent("test_event", { test_key: "test_val" });
+```

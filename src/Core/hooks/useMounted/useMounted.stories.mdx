@@ -1,0 +1,27 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Core/Hooks/useMounted" />
+
+## useMounted ⇒ <code>void</code>
+
+Takes a callback function as parameter and calls it once on initialize.
+
+### Props
+
+| Param    | Type                    | Required          | Description                             |
+| :------- | :---------------------- | :---------------- | :-------------------------------------- |
+| callback | <code>() => void</code> | <code>true</code> | Function to be called on initialization |
+
+### Usage
+
+```tsx
+import { useMounted } from "Core/hooks";
+
+const Component: React.FC = () => {
+  useMounted(() => {
+    console.log("Component mounted");
+  });
+
+  return <div />;
+};
+```

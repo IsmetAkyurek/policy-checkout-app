@@ -1,0 +1,66 @@
+@import "Core/styles/variables.scss";
+@import "Core/styles/mixins.scss";
+
+.container {
+  gap    : 16px;
+  display: flex;
+
+  .item {
+    transition: all .2s;
+    cursor    : pointer;
+    padding   : 20px 24px;
+
+    h4 {
+      font-weight   : 500;
+      font-size     : 16px;
+      line-height   : 1.25;
+      margin-bottom : 12px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color         : $color-primary;
+    }
+
+    p {
+      margin     : 0;
+      opacity    : 0.7;
+      line-height: 1.5;
+      font-size  : 18px;
+    }
+
+    &.selected {
+      color     : $color-white;
+      background: linear-gradient(267.3deg, #7C8EEF 0%, #6D6CD0 100.29%);
+
+      h4 {
+        color: white;
+      }
+    }
+  }
+
+  @include mobile {
+    padding           : 24px;
+    overflow-x        : auto;
+    scrollbar-width   : none;
+    -ms-overflow-style: none;
+    margin-left       : -24px;
+    width             : calc(100% + 48px);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .item {
+      min-width: 300px;
+      padding  : 16px 24px;
+
+      h4 {
+        margin-bottom: 8px;
+        font-size    : 14px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

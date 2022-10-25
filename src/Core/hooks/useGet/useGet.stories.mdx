@@ -1,0 +1,36 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Core/Hooks/useGet" />
+
+## useGet ⇒ <code>object</code>
+
+Takes a promise action and returns current data value, loading and error statuses along with the request function.
+
+### Props
+
+| Param    | Type                                  | Required           | Description                             |
+| :------- | :------------------------------------ | :----------------- | :-------------------------------------- |
+| callback | <code>() => Promise</code>            | <code>true</code>  | Function to be called on initialization |
+| options  | <code>{initialLoad?: boolean }</code> | <code>false</code> | Hook options                            |
+
+### Return
+
+| Param   | Type                       | Description        |
+| :------ | :------------------------- | :----------------- |
+| data    | <code>any</code>           | Current data value |
+| loading | <code>boolean</code>       | Loading status     |
+| error   | <code>string</code>        | Error status       |
+| request | <code>() => Promise</code> | Request function   |
+
+### Usage
+
+```tsx
+import { useMounted } from "Core/hooks";
+import { getPolicyPackages } from "Policy/api";
+
+const Component: React.FC = () => {
+  const packages = useGet(policyApi.getPolicyPackages);
+
+  return <div />;
+};
+```

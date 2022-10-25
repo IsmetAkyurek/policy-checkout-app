@@ -1,0 +1,28 @@
+@import "Core/styles/variables.scss";
+@import "Core/styles/mixins.scss";
+
+.container {
+
+  li {
+    display      : flex;
+    margin-bottom: 16px;
+
+    svg {
+      flex-shrink: 0;
+      font-size  : 12px;
+      margin     : 5px 6px 0 0;
+      color      : $color-primary;
+    }
+
+    span {
+      white-space: pre-wrap;
+    }
+  }
+
+  @include mobile {
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+}

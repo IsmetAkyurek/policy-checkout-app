@@ -1,0 +1,27 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Core/Hooks/useUnmounted" />
+
+## useUnmounted ⇒ <code>void</code>
+
+Takes a callback function as parameter and calls it once on unmounting.
+
+### Props
+
+| Param    | Type                    | Required          | Description                         |
+| :------- | :---------------------- | :---------------- | :---------------------------------- |
+| callback | <code>() => void</code> | <code>true</code> | Function to be called on unmounting |
+
+### Usage
+
+```tsx
+import { useUnmounted } from "Core/hooks";
+
+const Component: React.FC = () => {
+  useUnmounted(() => {
+    console.log("Component is unmounting");
+  });
+
+  return <div />;
+};
+```
